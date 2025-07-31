@@ -31,12 +31,13 @@ body {
   display: block;
 }
 
-.gato-morango.png {
-  max-width: 50px;
+.gato-morango {
+  width: 80px; /* ou outro valor menor se quiser reduzir mais */
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 10px;
 }
+
 
 /* Input section */
 .input-section {
