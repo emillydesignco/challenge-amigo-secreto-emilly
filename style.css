@@ -25,14 +25,14 @@ body {
 }
 
 .logo-moranguinho {
-  width: 20px;
+  width: 80px;
   height: auto;
   margin: 0 auto 20px auto;
   display: block;
 }
 
 .gato-morango {
-  width: 80px; /* ou outro valor menor se quiser reduzir mais */
+  width: 80px; 
   height: auto;
   display: block;
   margin: 0 auto 10px;
