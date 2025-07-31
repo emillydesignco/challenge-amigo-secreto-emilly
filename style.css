@@ -1,40 +1,43 @@
-/* Fundo rosa */
+/* Fundo rosa com imagem */
 body {
-  background-image: url('assets/fundo-rosa.png');
+  background-image: url("assets/fundo-rosa.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
 /* Logo Moranguinho no topo */
 .logo-moranguinho {
   display: block;
-  max-width: 120px;
-  margin: 0 auto 10px auto;
+  margin: 20px auto 10px auto;
+  width: 120px;
+  height: auto;
 }
 
 /* Header */
 .header-banner {
   text-align: center;
-  padding: 20px 10px;
+  padding: 10px 15px;
 }
 
 .main-title {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-weight: 900;
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin: 10px 0;
+  color: #5a5a8a;
 }
 
-.header-banner img:not(.logo-moranguinho) {
+.img-amigo-secreto {
   max-width: 120px;
   height: auto;
-  display: block;
   margin: 0 auto;
+  display: block;
 }
 
 /* Input section */
@@ -42,6 +45,9 @@ body {
   max-width: 400px;
   margin: 0 auto 40px auto;
   padding: 0 15px;
+  background: rgba(255 255 255 / 0.8);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0 0 0 / 0.1);
 }
 
 .section-title {
@@ -49,6 +55,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-align: center;
+  color: #5a5a8a;
 }
 
 .input-wrapper {
@@ -59,22 +66,24 @@ body {
 
 .input-name {
   flex: 1;
-  padding: 8px 12px;
+  padding: 10px 14px;
   font-size: 1rem;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1.5px solid #ccc;
   outline-color: #eb94bd;
+  font-family: "Inter", sans-serif;
 }
 
 .button-add {
   background-color: #eb94bd;
   border: none;
   color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 10px 18px;
+  border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: "Inter", sans-serif;
 }
 
 .button-add:hover,
@@ -83,13 +92,17 @@ body {
 }
 
 /* Listas */
-.name-list,
-.result-list {
+.name-list {
   list-style: none;
   padding-left: 0;
   font-size: 1.1rem;
   margin-bottom: 20px;
   color: #444;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
 }
 
 .result-list {
@@ -97,29 +110,33 @@ body {
   font-size: 1.3rem;
   color: #5a5a8a;
   text-align: center;
+  margin-bottom: 20px;
+  min-height: 60px;
 }
 
 /* Botão sortear */
 .button-container {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .button-draw {
   background-color: #90aadc;
   border: none;
   color: white;
-  padding: 10px 24px;
-  border-radius: 8px;
+  padding: 12px 28px;
+  border-radius: 10px;
   font-weight: 700;
   font-size: 1.1rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   transition: background-color 0.3s ease;
+  font-family: "Inter", sans-serif;
 }
 
-.button-draw img {
+.button-draw img.icon-play {
   width: 24px;
   height: 24px;
 }
@@ -129,41 +146,20 @@ body {
   background-color: #6c85ca;
 }
 
-/* Divs para imagens decorativas com background */
-
+/* Decorações de gatinhos */
 .decoracoes {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  margin-top: 32px;
+  margin-top: 20px;
 }
 
-.decoracoes div {
+.decoracoes img {
   width: 100px;
-  height: 100px;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  box-shadow: 0 0 8px rgba(0 0 0 / 0.1);
 }
 
-/* Imagens individuais via CSS */
-
-.gato-cachecol {
-  background-image: url('assets/gato-cachecol.png');
-}
-
-.gato-estrela {
-  background-image: url('assets/gato-estrela.png');
-}
-
-.gato-flor {
-  background-image: url('assets/gato-flor.png');
-}
-
-.gato-morango {
-  background-image: url('assets/gato-morango.png');
-}
 

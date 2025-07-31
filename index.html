@@ -2,53 +2,87 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amigo Secreto</title>
+
+  <!-- Fontes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
-  <title>Amigo Secreto</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="main-content">
     <header class="header-banner">
       <!-- Moranguinho como logo no topo -->
-      <img src="assets/moranguinho.png" alt="Logo Moranguinho" class="logo-moranguinho" />
-      
+      <img
+        src="assets/moranguinho.png"
+        alt="Logo Moranguinho"
+        class="logo-moranguinho"
+      />
       <h1 class="main-title">Amigo Secreto</h1>
-      <img src="assets/amigo-secreto.png" alt="Imagem representativa de amigo secreto" />
+      <img
+        src="assets/amigo-secreto.png"
+        alt="Imagem representativa de amigo secreto"
+        class="img-amigo-secreto"
+      />
     </header>
 
     <section class="input-section">
       <h2 class="section-title">Digite o nome dos seus amigos</h2>
+
       <div class="input-wrapper">
-        <input type="text" id="amigo" class="input-name" placeholder="Digite um nome" />
+        <input
+          type="text"
+          id="amigo"
+          class="input-name"
+          placeholder="Digite um nome"
+          aria-label="Nome do amigo"
+        />
         <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
       </div>
 
-      <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
-      <ul id="resultado" class="result-list" aria-live="polite"></ul>
+      <ul
+        id="listaAmigos"
+        class="name-list"
+        aria-labelledby="listaAmigos"
+        role="list"
+      ></ul>
+      <div id="resultado" class="result-list" aria-live="polite"></div>
 
       <div class="button-container">
-        <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
-          <img src="assets/play_circle_outline.png" alt="Ícone para sortear" />
+        <button
+          class="button-draw"
+          onclick="sortearAmigo()"
+          aria-label="Sortear amigo secreto"
+        >
+          <img
+            src="assets/play_circle_outline.png"
+            alt="Ícone para sortear"
+            class="icon-play"
+          />
           Sortear amigo
         </button>
       </div>
-    </section>
 
-    <!-- Imagens decorativas usando divs com background-image via CSS -->
-    <div class="decoracoes">
-      <div class="gato-cachecol" aria-label="Gato com cachecol"></div>
-      <div class="gato-estrela" aria-label="Gato estrela"></div>
-      <div class="gato-flor" aria-label="Gato flor"></div>
-      <div class="gato-morango" aria-label="Gato morango"></div>
-    </div>
+      <!-- Decorações de gatinhos -->
+      <div class="decoracoes">
+        <img src="assets/gato-cachecol.png" alt="Gato com cachecol" />
+        <img src="assets/gato-estrela.png" alt="Gato com estrela" />
+        <img src="assets/gato-flor.png" alt="Gato com flor" />
+        <img src="assets/gato-morango.png" alt="Gato morango" />
+      </div>
+    </section>
   </main>
 
   <script src="app.js" defer></script>
 </body>
 </html>
+
 
 
 

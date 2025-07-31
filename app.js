@@ -1,17 +1,17 @@
 const listaAmigos = [];
 const resultadoEl = document.getElementById("resultado");
 const listaAmigosEl = document.getElementById("listaAmigos");
+const inputAmigo = document.getElementById("amigo");
 
+// Adiciona amigo ao clicar no botão ou ao pressionar Enter no input
 function adicionarAmigo() {
-  const input = document.getElementById("amigo");
-  const nome = input.value.trim();
+  const nome = inputAmigo.value.trim();
 
   if (!nome) {
     alert("Por favor, insira um nome válido.");
     return;
   }
 
-  // Evitar nomes duplicados
   if (listaAmigos.includes(nome)) {
     alert("Esse nome já foi adicionado.");
     return;
@@ -19,8 +19,8 @@ function adicionarAmigo() {
 
   listaAmigos.push(nome);
   atualizarLista();
-  input.value = "";
-  input.focus();
+  inputAmigo.value = "";
+  inputAmigo.focus();
 }
 
 function atualizarLista() {
@@ -33,7 +33,6 @@ function atualizarLista() {
   resultadoEl.textContent = "";
 }
 
-// Função para embaralhar array (Fisher-Yates)
 function embaralharArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -48,16 +47,12 @@ function sortearAmigo() {
     return;
   }
 
-  // Criar uma cópia da lista para o sorteio
   const amigosSorteados = [...listaAmigos];
-
-  // Embaralhar os nomes para distribuição aleatória
   embaralharArray(amigosSorteados);
 
-  // Garantir que ninguém sorteie a si mesmo:
-  // Se alguém sorteou o próprio nome, repetir o embaralhamento
   let tentativas = 0;
   const maxTentativas = 1000;
+
   while (tentativas < maxTentativas) {
     let temIgual = false;
 
@@ -68,27 +63,33 @@ function sortearAmigo() {
       }
     }
 
-    if (!temIgual) break; // Nenhum sorteou a si mesmo, pronto!
+    if (!temIgual) break;
 
-    // Se alguém sorteou a si mesmo, embaralhar de novo
     embaralharArray(amigosSorteados);
     tentativas++;
   }
 
-  // Se não conseguiu evitar que alguém sorteasse a si mesmo depois de muitas tentativas
   if (tentativas === maxTentativas) {
     alert("Não foi possível realizar o sorteio. Tente novamente.");
     return;
   }
 
-  // Mostrar resultado formatado: quem vai presentear quem
-  resultadoEl.innerHTML = ""; // Limpar antes
+  resultadoEl.innerHTML = "";
   for (let i = 0; i < listaAmigos.length; i++) {
     const p = document.createElement("p");
     p.textContent = `${listaAmigos[i]} vai presentear ${amigosSorteados[i]}`;
     resultadoEl.appendChild(p);
   }
 }
+
+// Evento para adicionar amigo ao pressionar Enter
+inputAmigo.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // evita enviar formulário, se houver
+    adicionarAmigo();
+  }
+});
+
 
 
 
