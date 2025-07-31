@@ -46,7 +46,7 @@ function sortear() {
       // Embaralhar novamente se alguém tirar a si mesmo
       return sortear();
     }
-    resultados.push(`${quemTirou} ➜ ${quemFoiTirado}`);
+    resultados.push(`${quemTirou} vai presentear ${quemFoiTirado}`);
   }
 
   mostrarResultados(resultados);
