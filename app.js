@@ -1,51 +1,48 @@
-let nomes = [];
+const amigos = [];
 
-function adicionarNome() {
-  const input = document.getElementById('nameInput');
+function adicionarAmigo() {
+  const input = document.getElementById('amigo');
   const nome = input.value.trim();
 
-  if (nome && !nomes.includes(nome)) {
-    nomes.push(nome);
-    atualizarLista();
+  if (nome !== '' && !amigos.includes(nome)) {
+    amigos.push(nome);
+
+    const lista = document.getElementById('listaAmigos');
+    const item = document.createElement('li');
+    item.textContent = nome;
+    lista.appendChild(item);
     input.value = '';
   }
 }
 
-function atualizarLista() {
-  const lista = document.getElementById('nameList');
-  lista.innerHTML = '';
-  nomes.forEach(nome => {
-    const li = document.createElement('li');
-    li.textContent = nome;
-    lista.appendChild(li);
-  });
+function embaralhar(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
 }
 
-function sortearAmigoSecreto() {
-  if (nomes.length < 2) {
-    alert('Adicione pelo menos dois nomes!');
+function sortearAmigo() {
+  if (amigos.length < 2) {
+    alert('Adicione pelo menos dois amigos para sortear!');
     return;
   }
 
-  const embaralhado = [...nomes].sort(() => Math.random() - 0.5);
-  const resultado = [];
+  const sorteio = [...amigos];
+  embaralhar(sorteio);
 
-  for (let i = 0; i < nomes.length; i++) {
-    const amigo = i === nomes.length - 1 ? embaralhado[0] : embaralhado[i + 1];
-    resultado.push(`${embaralhado[i]} → ${amigo}`);
+  const resultado = document.getElementById('resultado');
+  resultado.innerHTML = '';
+
+  for (let i = 0; i < amigos.length; i++) {
+    const amigo = amigos[i];
+    const sorteado = sorteio[i === sorteio.length - 1 ? 0 : i + 1];
+
+    const item = document.createElement('li');
+    item.textContent = `${amigo} vai tirar ${sorteado}`;
+    resultado.appendChild(item);
   }
-
-  exibirResultado(resultado);
 }
 
-function exibirResultado(lista) {
-  const resultList = document.getElementById('resultList');
-  resultList.innerHTML = '';
-  lista.forEach(item => {
-    const li = document.createElement('li');
-    li.textContent = item;
-    resultList.appendChild(li);
-  });
-}
 
 

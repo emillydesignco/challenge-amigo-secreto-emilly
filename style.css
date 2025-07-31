@@ -1,3 +1,4 @@
+/* Fundo rosa */
 body {
   background-image: url('assets/fundo-rosa.png');
   background-size: cover;
@@ -7,6 +8,13 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+/* Logo Moranguinho no topo */
+.logo-moranguinho {
+  display: block;
+  max-width: 120px;
+  margin: 0 auto 10px auto;
 }
 
 /* Header */
@@ -22,7 +30,7 @@ body {
   margin-bottom: 10px;
 }
 
-.header-banner img {
+.header-banner img:not(.logo-moranguinho) {
   max-width: 120px;
   height: auto;
   display: block;
@@ -121,6 +129,8 @@ body {
   background-color: #6c85ca;
 }
 
+/* Divs para imagens decorativas com background */
+
 .decoracoes {
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +139,31 @@ body {
   margin-top: 32px;
 }
 
-.decoracoes img {
+.decoracoes div {
   width: 100px;
-  height: auto;
+  height: 100px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+/* Imagens individuais via CSS */
+
+.gato-cachecol {
+  background-image: url('assets/gato-cachecol.png');
+}
+
+.gato-estrela {
+  background-image: url('assets/gato-estrela.png');
+}
+
+.gato-flor {
+  background-image: url('assets/gato-flor.png');
+}
+
+.gato-morango {
+  background-image: url('assets/gato-morango.png');
+}
+
