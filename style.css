@@ -30,7 +30,7 @@ body {
   font-weight: 900;
   font-size: 3rem;
   margin: 10px 0;
-  color: #5a5a8a;
+  color: #471733;
 }
 
 .img-amigo-secreto {
@@ -55,7 +55,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-align: center;
-  color: #5a5a8a;
+  color: #eb94bd;
 }
 
 .input-wrapper {
@@ -108,7 +108,7 @@ body {
 .result-list {
   font-weight: 700;
   font-size: 1.3rem;
-  color: #5a5a8a;
+  color: #3d0438;
   text-align: center;
   margin-bottom: 20px;
   min-height: 60px;
@@ -121,7 +121,7 @@ body {
 }
 
 .button-draw {
-  background-color: #90aadc;
+  background-color: #eb94bd;
   border: none;
   color: white;
   padding: 12px 28px;
@@ -143,7 +143,7 @@ body {
 
 .button-draw:hover,
 .button-draw:focus {
-  background-color: #6c85ca;
+  background-color: #eb94bd;
 }
 
 /* Decorações de gatinhos */
