@@ -1,0 +1,94 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  background-image: url("assets/fundo-rosa.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.85);
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px #ccc;
+}
+
+h1 {
+  color: #cc7fa3;
+  font-size: 28px;
+}
+
+.form {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  width: 60%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  background-color: #aec6cf;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #93b2c0;
+}
+
+.sortear {
+  margin-top: 20px;
+}
+
+#resultado {
+  font-size: 18px;
+  color: #4d4d4d;
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ffe5ec;
+  margin: 5px auto;
+  padding: 8px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.galeria {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+}
+
+
