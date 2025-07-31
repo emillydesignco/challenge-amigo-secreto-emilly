@@ -21,14 +21,21 @@ body {
   font-weight: 900;
   font-size: 3rem;
   margin-bottom: 10px;
+  color: #9b2b6e; /* rosa escuro */
 }
 
 .logo-moranguinho {
   width: 120px;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   display: block;
-  margin-bottom: 20px;
+}
+
+.amigo-secreto-img {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Input section */
@@ -43,6 +50,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-align: center;
+  color: #c55a8a; /* rosa médio */
 }
 
 .input-wrapper {
@@ -56,12 +64,14 @@ body {
   padding: 8px 12px;
   font-size: 1rem;
   border-radius: 6px;
-  border: 1.5px solid #ccc;
-  outline-color: #eb94bd;
+  border: 1.5px solid #e1a3c0; /* rosa clarinho */
+  outline-color: #d87ea3; /* rosa médio */
+  color: #6b294f; /* texto rosa escuro */
+  background-color: #fff0f6; /* fundo muito clarinho */
 }
 
 .button-add {
-  background-color: #eb94bd;
+  background-color: #d87ea3; /* rosa médio */
   border: none;
   color: white;
   padding: 8px 16px;
@@ -73,7 +83,7 @@ body {
 
 .button-add:hover,
 .button-add:focus {
-  background-color: #d87ea3;
+  background-color: #bb4f81; /* rosa mais escuro */
 }
 
 /* Listas */
@@ -83,13 +93,13 @@ body {
   padding-left: 0;
   font-size: 1.1rem;
   margin-bottom: 20px;
-  color: #444;
+  color: #7f406a; /* rosa escuro */
 }
 
 .result-list {
   font-weight: 700;
   font-size: 1.3rem;
-  color: #5a5a8a;
+  color: #9b2b6e; /* rosa escuro */
   text-align: center;
 }
 
@@ -99,9 +109,9 @@ body {
 }
 
 .button-draw {
-  background-color: #90aadc;
+  background-color: #f4a1c5; /* rosa claro */
   border: none;
-  color: white;
+  color: #6b294f; /* rosa escuro */
   padding: 10px 24px;
   border-radius: 8px;
   font-weight: 700;
@@ -116,11 +126,14 @@ body {
 .button-draw img {
   width: 24px;
   height: 24px;
+  filter: invert(22%) sepia(47%) saturate(4497%) hue-rotate(319deg) brightness(93%) contrast(86%);
+  /* deixa o ícone em tom rosa */
 }
 
 .button-draw:hover,
 .button-draw:focus {
-  background-color: #6c85ca;
+  background-color: #c55a8a; /* rosa médio */
+  color: white;
 }
 
 /* Decorações - gatos */
@@ -135,7 +148,16 @@ body {
 .decoracoes img {
   width: 100px;
   height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 8px 2px #f4a1c5aa; /* sombra rosa clara */
+  transition: transform 0.3s ease;
 }
+
+.decoracoes img:hover {
+  transform: scale(1.1);
+}
+
+
 
 
 
