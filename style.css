@@ -155,6 +155,23 @@ body {
 .decoracoes img:hover {
   transform: scale(1.1);
 }
+.footer {
+  text-align: center;
+  padding: 12px 0;
+  background-color: #f4a1c5; /* rosa claro para combinar */
+  color: #6b294f; /* rosa escuro */
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  user-select: none;
+  margin-top: 40px;
+  border-top: 2px solid #d87ea3; /* linha rosa para destaque */
+}
+
+.footer .laço {
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
 
 
 
