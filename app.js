@@ -1,39 +1,58 @@
-const listaAmigos = [];
-const resultadoEl = document.getElementById("resultado");
-const listaAmigosEl = document.getElementById("listaAmigos");
-const inputAmigo = document.getElementById("amigo");
+const nomes = [];
+const listaNomes = document.getElementById('listaNomes');
+const input = document.getElementById('nomeInput');
+const listaResultados = document.getElementById('listaResultados');
 
-// Adiciona amigo ao clicar no botão ou ao pressionar Enter no input
-function adicionarAmigo() {
-  const nome = inputAmigo.value.trim();
-
-  if (!nome) {
-    alert("Por favor, insira um nome válido.");
-    return;
+// Adiciona nome com Enter
+input.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    adicionarNome();
   }
+});
 
-  if (listaAmigos.includes(nome)) {
-    alert("Esse nome já foi adicionado.");
-    return;
-  }
+function adicionarNome() {
+  const nome = input.value.trim();
 
-  listaAmigos.push(nome);
+  if (nome === '') return;
+
+  nomes.push(nome);
   atualizarLista();
-  inputAmigo.value = "";
-  inputAmigo.focus();
+  input.value = '';
+  input.focus();
 }
 
 function atualizarLista() {
-  listaAmigosEl.innerHTML = "";
-  listaAmigos.forEach((amigo) => {
-    const li = document.createElement("li");
-    li.textContent = amigo;
-    listaAmigosEl.appendChild(li);
+  listaNomes.innerHTML = '';
+  nomes.forEach(nome => {
+    const li = document.createElement('li');
+    li.textContent = nome;
+    listaNomes.appendChild(li);
   });
-  resultadoEl.textContent = "";
 }
 
-function embaralharArray(array) {
+function sortear() {
+  if (nomes.length < 2) {
+    alert('Adicione pelo menos dois nomes!');
+    return;
+  }
+
+  const sorteados = embaralhar([...nomes]);
+  const resultados = [];
+
+  for (let i = 0; i < nomes.length; i++) {
+    const quemTirou = nomes[i];
+    const quemFoiTirado = sorteados[i];
+    if (quemTirou === quemFoiTirado) {
+      // Embaralhar novamente se alguém tirar a si mesmo
+      return sortear();
+    }
+    resultados.push(`${quemTirou} ➜ ${quemFoiTirado}`);
+  }
+
+  mostrarResultados(resultados);
+}
+
+function embaralhar(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -41,54 +60,15 @@ function embaralharArray(array) {
   return array;
 }
 
-function sortearAmigo() {
-  if (listaAmigos.length < 2) {
-    alert("Adicione pelo menos dois amigos para sortear.");
-    return;
-  }
-
-  const amigosSorteados = [...listaAmigos];
-  embaralharArray(amigosSorteados);
-
-  let tentativas = 0;
-  const maxTentativas = 1000;
-
-  while (tentativas < maxTentativas) {
-    let temIgual = false;
-
-    for (let i = 0; i < listaAmigos.length; i++) {
-      if (listaAmigos[i] === amigosSorteados[i]) {
-        temIgual = true;
-        break;
-      }
-    }
-
-    if (!temIgual) break;
-
-    embaralharArray(amigosSorteados);
-    tentativas++;
-  }
-
-  if (tentativas === maxTentativas) {
-    alert("Não foi possível realizar o sorteio. Tente novamente.");
-    return;
-  }
-
-  resultadoEl.innerHTML = "";
-  for (let i = 0; i < listaAmigos.length; i++) {
-    const p = document.createElement("p");
-    p.textContent = `${listaAmigos[i]} vai presentear ${amigosSorteados[i]}`;
-    resultadoEl.appendChild(p);
-  }
+function mostrarResultados(resultados) {
+  listaResultados.innerHTML = '';
+  resultados.forEach(r => {
+    const li = document.createElement('li');
+    li.textContent = r;
+    listaResultados.appendChild(li);
+  });
 }
 
-// Evento para adicionar amigo ao pressionar Enter
-inputAmigo.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault(); // evita enviar formulário, se houver
-    adicionarAmigo();
-  }
-});
 
 
 
