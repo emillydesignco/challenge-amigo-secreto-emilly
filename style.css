@@ -13,29 +13,23 @@ body {
 /* Header */
 .header-banner {
   text-align: center;
-  padding: 20px 10px;
+  padding: 30px 10px;
 }
 
 .main-title {
   font-family: 'Merriweather', serif;
   font-weight: 900;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #9b2b6e;
+  font-size: 3.5rem;
+  color: var(--rosa-escuro);
+  margin-bottom: 20px;
 }
 
 .logo-moranguinho {
-  width: 80px;
+  width: 60px;
   height: auto;
   display: block;
-  margin: 0 auto 10px;
-}
-
-.gato-morango {
-  width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 20px auto;
+  filter: drop-shadow(0 0 2px var(--rosa-medio));
 }
 
 /* Input section */
@@ -50,7 +44,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-align: center;
-  color: #c55a8a;
+  color: var(--rosa-medio);
 }
 
 .input-wrapper {
@@ -61,45 +55,53 @@ body {
 
 .input-name {
   flex: 1;
-  padding: 8px 12px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1.5px solid #e1a3c0;
-  outline-color: #d87ea3;
-  color: #6b294f;
-  background-color: #fff0f6;
+  padding: 12px 15px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 2px solid var(--rosa-medio);
+  outline-color: var(--lavanda);
+  color: var(--rosa-escuro);
+  background-color: var(--rosa-claro);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+.input-name::placeholder {
+  color: var(--rosa-medio);
+}
+
+.input-name:focus {
+  border-color: var(--lavanda);
+  background-color: #fff;
+  outline: none;
+}
+
+/* Botão adicionar */
 .button-add {
-  background-color: #d87ea3;
+  background-color: var(--lavanda);
+  color: var(--rosa-escuro);
+  padding: 10px 24px;
   border: none;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: 12px;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button-add:hover,
 .button-add:focus {
-  background-color: #bb4f81;
+  background-color: var(--rosa-medio);
+  color: white;
 }
 
-/* Listas */
+/* Listas de nomes e resultados */
 .name-list,
 .result-list {
   list-style: none;
   padding-left: 0;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #7f406a;
-}
-
-.result-list {
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: #9b2b6e;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: var(--rosa-escuro);
+  font-weight: 600;
   text-align: center;
 }
 
@@ -109,33 +111,33 @@ body {
 }
 
 .button-draw {
-  background-color: #f4a1c5;
-  border: none;
-  color: #6b294f;
-  padding: 10px 24px;
-  border-radius: 8px;
+  background-color: var(--azul-claro);
+  color: var(--rosa-escuro);
+  padding: 12px 28px;
+  border-radius: 12px;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  transition: background-color 0.3s ease;
+  gap: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
 }
 
 .button-draw img {
   width: 24px;
   height: 24px;
-  filter: invert(22%) sepia(47%) saturate(4497%) hue-rotate(319deg) brightness(93%) contrast(86%);
+  filter: invert(39%) sepia(8%) saturate(1066%) hue-rotate(294deg) brightness(91%) contrast(87%);
 }
 
 .button-draw:hover,
 .button-draw:focus {
-  background-color: #c55a8a;
+  background-color: var(--rosa-medio);
   color: white;
 }
 
-/* Decorações */
+/* Decorações - gatos */
 .decoracoes {
   display: flex;
   flex-wrap: wrap;
@@ -148,29 +150,34 @@ body {
   width: 100px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 8px 2px #f4a1c5aa;
+  box-shadow: 0 0 8px 2px var(--rosa-claro);
   transition: transform 0.3s ease;
 }
 
 .decoracoes img:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 12px 4px var(--rosa-medio);
 }
+
+/* Gato morango menor */
+.gato-morango {
+  width: 60px !important;
+  height: auto;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+/* Rodapé */
 .footer {
-  text-align: center;
-  padding: 12px 0;
-  background-color: #f4a1c5; /* rosa claro para combinar */
-  color: #6b294f; /* rosa escuro */
+  background-color: var(--rosa-claro);
+  color: var(--rosa-escuro);
   font-weight: 600;
-  font-family: 'Inter', sans-serif;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 2px solid var(--lavanda);
   font-size: 1rem;
   user-select: none;
   margin-top: 40px;
-  border-top: 2px solid #d87ea3; /* linha rosa para destaque */
-}
-
-.footer .laço {
-  margin-left: 8px;
-  font-size: 1.2rem;
 }
 
 
