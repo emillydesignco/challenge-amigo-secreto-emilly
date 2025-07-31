@@ -2,12 +2,10 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- boa prática -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Amigo Secreto</title>
-    
-    <!-- Fontes Google -->
+
+    <!-- Fonts Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,49 +18,41 @@
 </head>
 <body>
     <main class="main-content">
-        <header class="header-banner" role="banner">
+        <header class="header-banner">
             <h1 class="main-title">Amigo Secreto</h1>
-            <img src="assets/amigo-secreto.png" alt="Ilustração representativa de amigo secreto" />
+            <img src="assets/amigo-secreto.png" alt="Imagem representativa de amigo secreto" />
         </header>
 
-        <section class="input-section" aria-labelledby="input-section-title">
-            <h2 id="input-section-title" class="section-title">Digite o nome dos seus amigos</h2>
+        <!-- Galeria de imagens dos gatinhos -->
+        <section class="gallery" aria-label="Galeria de imagens de gatinhos">
+            <img src="assets/gato-cachecol.png" alt="Gato com cachecol" class="img-gallery" />
+            <img src="assets/gato-estrela.png" alt="Gato com estrela" class="img-gallery" />
+            <img src="assets/gato-flor.png" alt="Gato com flor" class="img-gallery" />
+            <img src="assets/moranguinho.png" alt="Moranguinho" class="img-gallery" />
+            <img src="assets/gato-morango.png" alt="Gato com morango" class="img-gallery" />
+        </section>
+
+        <section class="input-section">
+            <h2 class="section-title">Digite o nome dos seus amigos</h2>
             <div class="input-wrapper">
                 <input
                   type="text"
                   id="amigo"
                   class="input-name"
                   placeholder="Digite um nome"
-                  aria-label="Nome do amigo"
+                  aria-label="Campo para digitar o nome do amigo"
                 />
-                <button class="button-add" type="button" onclick="adicionarAmigo()">Adicionar</button>
+                <button class="button-add" onclick="adicionarAmigo()" aria-label="Adicionar amigo à lista">
+                  Adicionar
+                </button>
             </div>
 
-            <!-- Lista de amigos adicionados -->
-            <ul
-              id="listaAmigos"
-              class="name-list"
-              role="list"
-              aria-label="Lista de amigos adicionados"
-            ></ul>
+            <ul id="listaAmigos" class="name-list" aria-live="polite" aria-label="Lista de amigos adicionados"></ul>
 
-            <!-- Resultado do sorteio -->
-            <ul
-              id="resultado"
-              class="result-list"
-              aria-live="polite"
-              aria-atomic="true"
-              role="list"
-              aria-label="Resultado do sorteio"
-            ></ul>
+            <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
             <div class="button-container">
-                <button
-                  class="button-draw"
-                  type="button"
-                  onclick="sortearAmigo()"
-                  aria-label="Sortear amigo secreto"
-                >
+                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícone para sortear" />
                     Sortear amigo
                 </button>
@@ -70,10 +60,11 @@
         </section>
     </main>
 
-    <!-- Script com defer para carregar após o HTML -->
     <script src="app.js" defer></script>
 </body>
 </html>
+
+
 
 
 

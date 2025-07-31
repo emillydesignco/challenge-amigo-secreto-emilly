@@ -1,47 +1,48 @@
-const form = document.getElementById('form-adicionar');
-const inputNome = document.getElementById('input-nome');
-const listaNomes = document.getElementById('lista-nomes');
-const btnSortear = document.getElementById('btn-sortear');
-const resultado = document.getElementById('resultado');
+// Array para armazenar os nomes adicionados
+const amigos = [];
 
-let nomes = [];
+// Função para adicionar amigo na lista
+function adicionarAmigo() {
+  const input = document.getElementById('amigo');
+  const nome = input.value.trim();
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-
-  const nome = inputNome.value.trim();
-
-  if (!nome) {
+  if (nome === '') {
     alert('Por favor, digite um nome válido.');
     return;
   }
 
-  nomes.push(nome);
+  amigos.push(nome);
   atualizarLista();
-  inputNome.value = '';
-  inputNome.focus();
-
-  btnSortear.disabled = nomes.length === 0;
-});
-
-function atualizarLista() {
-  listaNomes.innerHTML = '';
-
-  nomes.forEach(nome => {
-    const li = document.createElement('li');
-    li.textContent = nome;
-    listaNomes.appendChild(li);
-  });
+  input.value = '';
+  input.focus();
 }
 
-btnSortear.addEventListener('click', () => {
-  if (nomes.length === 0) {
-    alert('Adicione pelo menos um nome antes de sortear.');
+// Atualiza a lista de amigos exibida na tela
+function atualizarLista() {
+  const lista = document.getElementById('listaAmigos');
+  lista.innerHTML = '';
+
+  amigos.forEach((amigo, index) => {
+    const li = document.createElement('li');
+    li.textContent = amigo;
+    li.setAttribute('aria-label', `Amigo número ${index + 1}: ${amigo}`);
+    lista.appendChild(li);
+  });
+
+  // Limpa o resultado do sorteio ao atualizar a lista
+  document.getElementById('resultado').textContent = '';
+}
+
+// Função para sortear um amigo secreto aleatoriamente
+function sortearAmigo() {
+  if (amigos.length === 0) {
+    alert('Adicione pelo menos um amigo antes de sortear.');
     return;
   }
 
-  const indexSorteado = Math.floor(Math.random() * nomes.length);
-  const nomeSorteado = nomes[indexSorteado];
+  const indiceSorteado = Math.floor(Math.random() * amigos.length);
+  const amigoSorteado = amigos[indiceSorteado];
 
-  resultado.textContent = `O amigo secreto sorteado foi: ${nomeSorteado}`;
-});
+  const resultado = document.getElementById('resultado');
+  resultado.textContent = `O amigo secreto sorteado foi: ${amigoSorteado}`;
+}

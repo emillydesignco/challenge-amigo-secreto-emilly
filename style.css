@@ -1,94 +1,140 @@
-body, html {
+/* Fundo rosa pastel */
+body {
+  background-image: url('assets/fundo-rosa.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-.background {
-  background-image: url("assets/fundo-rosa.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-.container {
-  background-color: rgba(255, 255, 255, 0.85);
-  max-width: 500px;
-  margin: auto;
-  padding: 30px;
-  border-radius: 20px;
+/* Header */
+.header-banner {
   text-align: center;
-  box-shadow: 0 0 10px #ccc;
+  padding: 20px 10px;
 }
 
-h1 {
-  color: #cc7fa3;
-  font-size: 28px;
+.main-title {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.form {
-  margin: 20px 0;
-}
-
-input {
-  padding: 10px;
-  width: 60%;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-button {
-  padding: 10px 15px;
-  margin-left: 10px;
-  border: none;
-  background-color: #aec6cf;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #93b2c0;
-}
-
-.sortear {
-  margin-top: 20px;
-}
-
-#resultado {
-  font-size: 18px;
-  color: #4d4d4d;
-  margin-top: 20px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  background-color: #ffe5ec;
-  margin: 5px auto;
-  padding: 8px;
-  border-radius: 10px;
-  width: 80%;
-}
-
-.galeria {
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.galeria img {
-  width: 80px;
+.header-banner img {
+  max-width: 120px;
   height: auto;
-  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
+/* Galeria de imagens */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 10px;
+  flex-wrap: wrap;
+}
+
+.img-gallery {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Input section */
+.input-section {
+  max-width: 400px;
+  margin: 0 auto 40px auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-name {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  outline-color: #eb94bd;
+}
+
+.button-add {
+  background-color: #eb94bd;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-add:hover,
+.button-add:focus {
+  background-color: #d87ea3;
+}
+
+/* Listas */
+.name-list,
+.result-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.result-list {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #5a5a8a;
+  text-align: center;
+}
+
+/* Botão sortear */
+.button-container {
+  text-align: center;
+}
+
+.button-draw {
+  background-color: #90aadc;
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.button-draw img {
+  width: 24px;
+  height: 24px;
+}
+
+.button-draw:hover,
+.button-draw:focus {
+  background-color: #6c85ca;
+}
 

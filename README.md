@@ -1,56 +1,44 @@
-# Challenge: Amigo Secreto
+# Projeto Amigo Secreto - Tema Gatinhos
 
-Este é um projeto desenvolvido como parte do Challenge Alura One. A aplicação permite adicionar nomes de amigos, exibi-los em uma lista e realizar um sorteio aleatório de amigo secreto.
+Este é um projeto simples de Amigo Secreto desenvolvido em HTML, CSS e JavaScript. Permite que o usuário adicione nomes de amigos em uma lista e faça um sorteio aleatório para escolher o amigo secreto.
 
 ## Funcionalidades
 
-- Adicionar nomes à lista
-- Validação para impedir nomes vazios
-- Visualização da lista de participantes
-- Sorteio aleatório de um amigo secreto
-- Estilo visual com tema de gatinhos e tons pastéis
+- Adicionar nomes na lista de amigos.
+- Validar entrada para evitar nomes vazios.
+- Exibir a lista de amigos adicionados.
+- Sortear um amigo secreto aleatoriamente e mostrar o resultado na página.
+- Design com tema de gatinhos em tons pastéis (bege, rosa e azul).
+- Layout responsivo e acessível.
 
-## Tecnologias Utilizadas
+## Como usar
+
+1. Clone este repositório ou faça download dos arquivos.
+2. Abra o arquivo `index.html` no seu navegador.
+3. Digite o nome dos seus amigos no campo de texto e clique em "Adicionar".
+4. Depois de adicionar todos os nomes, clique em "Sortear amigo" para ver o resultado.
+
+## Estrutura do projeto
+
+- `index.html` — arquivo principal HTML da aplicação.
+- `style.css` — arquivo de estilos CSS.
+- `app.js` — código JavaScript para funcionalidades da aplicação.
+- `assets/` — pasta com imagens usadas no projeto (gatos, ícones, fundo).
+
+## Tecnologias usadas
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (Vanilla)
 
-## Tema
+## Contato
 
-O projeto utiliza um tema visual com gatinhos e cores suaves em tons de rosa, azul e bege. As imagens estão armazenadas na pasta `assets`.
-
-## Estrutura de Pastas
-
-projeto-amigo-secreto-emilly/
-│
-├── assets/
-├── fundo-rosa.png
-├── gato-cachecol.png
-├── gato-estrela.png
-├── gato-flor.png
-├── moranguinho.png
-└── gato-morango.png
-├── index.html
-├── README.md
-├── style.css
-├── script.js
-
-
-
-## Como Usar
-
-1. Clone o repositório:
-git clone https://github.com/seu-usuario/challenge-amigo-secreto_pt.git
-
-2. Abra o arquivo `index.html` em um navegador da sua preferência.
-
-## Captura de Tela
-
-Adicione aqui uma imagem do projeto funcionando, se desejar.
+Caso tenha dúvidas ou queira contribuir, entre em contato.
 
 ---
 
-Projeto criado por Emilly como parte do programa Alura ONE.
+Projeto desenvolvido para o desafio do Alura One por Emilly Gomes.
+
+
 
 
