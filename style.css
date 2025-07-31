@@ -1,16 +1,13 @@
-
-/* Define o fundo rosa */
 body {
-    background-image: url('assets/fundo-rosa.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
+  background-image: url('assets/fundo-rosa.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
 
 /* Header */
 .header-banner {
@@ -125,15 +122,14 @@ body {
 }
 
 .decoracoes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
 }
 
 .decoracoes img {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }
-
