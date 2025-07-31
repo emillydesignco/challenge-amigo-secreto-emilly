@@ -25,18 +25,19 @@ body {
 }
 
 .logo-moranguinho {
-  width: 80px;
+  width: 60px;
   height: auto;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 10px;
   display: block;
 }
 
 .gato-morango {
-  width: 80px; 
+  width: 60px;
   height: auto;
   display: block;
   margin: 0 auto 10px;
 }
+
 
 
 /* Input section */
