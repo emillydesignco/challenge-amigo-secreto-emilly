@@ -25,14 +25,14 @@ body {
 }
 
 .logo-moranguinho {
-  width: 80px;
+  width: 80;
   height: auto;
   margin: 0 auto 20px auto;
   display: block;
 }
 
 .amigo-secreto-img {
-  max-width: 120px;
+  max-width: 50px;
   height: auto;
   display: block;
   margin: 0 auto;
