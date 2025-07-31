@@ -19,16 +19,16 @@ body {
 .main-title {
   font-family: 'Merriweather', serif;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #9b2b6e; /* rosa escuro */
+  color: #9b2b6e;
 }
 
 .logo-moranguinho {
   width: 60px;
   height: auto;
-  margin: 0 auto 10px;
   display: block;
+  margin: 0 auto 10px;
 }
 
 .gato-morango {
@@ -37,8 +37,6 @@ body {
   display: block;
   margin: 0 auto 10px;
 }
-
-
 
 /* Input section */
 .input-section {
@@ -52,7 +50,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-align: center;
-  color: #c55a8a; /* rosa médio */
+  color: #c55a8a;
 }
 
 .input-wrapper {
@@ -66,14 +64,14 @@ body {
   padding: 8px 12px;
   font-size: 1rem;
   border-radius: 6px;
-  border: 1.5px solid #e1a3c0; /* rosa clarinho */
-  outline-color: #d87ea3; /* rosa médio */
-  color: #6b294f; /* texto rosa escuro */
-  background-color: #fff0f6; /* fundo muito clarinho */
+  border: 1.5px solid #e1a3c0;
+  outline-color: #d87ea3;
+  color: #6b294f;
+  background-color: #fff0f6;
 }
 
 .button-add {
-  background-color: #d87ea3; /* rosa médio */
+  background-color: #d87ea3;
   border: none;
   color: white;
   padding: 8px 16px;
@@ -85,7 +83,7 @@ body {
 
 .button-add:hover,
 .button-add:focus {
-  background-color: #bb4f81; /* rosa mais escuro */
+  background-color: #bb4f81;
 }
 
 /* Listas */
@@ -95,13 +93,13 @@ body {
   padding-left: 0;
   font-size: 1.1rem;
   margin-bottom: 20px;
-  color: #7f406a; /* rosa escuro */
+  color: #7f406a;
 }
 
 .result-list {
   font-weight: 700;
   font-size: 1.3rem;
-  color: #9b2b6e; /* rosa escuro */
+  color: #9b2b6e;
   text-align: center;
 }
 
@@ -111,9 +109,9 @@ body {
 }
 
 .button-draw {
-  background-color: #f4a1c5; /* rosa claro */
+  background-color: #f4a1c5;
   border: none;
-  color: #6b294f; /* rosa escuro */
+  color: #6b294f;
   padding: 10px 24px;
   border-radius: 8px;
   font-weight: 700;
@@ -129,12 +127,11 @@ body {
   width: 24px;
   height: 24px;
   filter: invert(22%) sepia(47%) saturate(4497%) hue-rotate(319deg) brightness(93%) contrast(86%);
-  /* deixa o ícone em tom rosa */
 }
 
 .button-draw:hover,
 .button-draw:focus {
-  background-color: #c55a8a; /* rosa médio */
+  background-color: #c55a8a;
   color: white;
 }
 
@@ -151,7 +148,7 @@ body {
   width: 100px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 8px 2px #f4a1c5aa; /* sombra rosa clara */
+  box-shadow: 0 0 8px 2px #f4a1c5aa;
   transition: transform 0.3s ease;
 }
 
